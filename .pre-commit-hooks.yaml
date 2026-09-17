@@ -1,0 +1,13 @@
+- id: check-todo-fixme
+  name: Check TODO_FIXME markers
+  description: Prevents committing temporary TODO_FIXME markers.
+  entry: bin/check-todo-fixme.sh
+  language: script
+  types: [text]
+
+- id: markdownlint-cli2
+  name: Markdownlint-cli2
+  description: Exécute markdownlint via un conteneur Docker.
+  entry: --entrypoint markdownlint-cli2 ghcr.io/davidanson/markdownlint-cli2:v0.23.2
+  language: docker
+  types: [markdown]
